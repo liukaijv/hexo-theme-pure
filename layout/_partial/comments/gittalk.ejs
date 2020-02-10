@@ -1,0 +1,18 @@
+<div id="comments" class="post-comments"></div>
+<%- js('js/md5.min.js') %>
+<link rel="stylesheet" href="<%= theme.gitalk.cdnCssUrl %>">
+<script src="<%= theme.gitalk.cdnJsUrl %>"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '<%= theme.gitalk.clientID %>',
+        clientSecret: '<%= theme.gitalk.clientSecret %>',
+        repo: '<%= theme.gitalk.repo %>',
+        owner: '<%= theme.gitalk.owner %>',
+        admin: ['<%= theme.gitalk.admin %>'],
+        id: md5(decodeURI(window.location.pathname)),
+        distractionFreeMode: '<%= theme.gitalk.distractionFreeMode %>',
+        language: '<%= (theme.gitalk.language || site.language) %>',
+        perPage: parseInt('<%= theme.gitalk.perPage %>', 10)
+    })
+    gitalk.render('comments');
+</script>

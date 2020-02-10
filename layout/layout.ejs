@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/header.ejs') %>
+<section class="container content">
+    <main>
+        <% if(page.layout == '404'){ %>
+            <div class="empty-data">
+                <div class="empty-content">
+                    <p><i class="lb-icon-frown"></i></p>
+                    <p><%- __('not_found') %></p>
+                </div>
+            </div>
+        <% }else{ %>
+            <%- body %>
+        <% } %>
+    </main>
+    <% if (theme.sidebar){ %>
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    <% } %>
+</section>
+
+<%- partial('_partial/footer.ejs') %>
+<%- js('js/script') %>
+</body>
+</html>

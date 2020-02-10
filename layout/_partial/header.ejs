@@ -1,0 +1,26 @@
+<header>
+    <div class="container">
+        <% if(theme.show_logo && theme.logo_text){ %>
+            <h1 class="logo">
+                <a href="<%- url_for() %>"><%= theme.logo_text %></a>
+            </h1>
+        <% } %>
+        <nav class="menu" id="nav">
+            <ul>
+                <% for (var i in theme.menu){ %>
+                    <li>
+                        <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </nav>
+        <% if(theme.allow_search){ %>
+            <%- partial('_partial/search') %>
+        <% } %>
+        <div class="toggle-menu">
+            <a class="menu-icon" id="toggle-nav">
+                <i class="lb-icon-list"></i>
+            </a>
+        </div>
+    </div>
+</header>

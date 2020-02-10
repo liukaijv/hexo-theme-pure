@@ -1,0 +1,172 @@
+.article-entry figure {
+    margin: 10px 0 !important;
+}
+
+.article-entry pre, .article-entry .highlight {
+    background: #2d2d2d none repeat scroll 0 0;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px 0;
+    color: #ccc;
+    line-height: 22.4px;
+    margin: 0 -20px;
+    overflow: auto;
+    padding: 15px 20px;
+}
+
+.article-entry .highlight .gutter pre, .article-entry .gist .gist-file .gist-data .line-numbers {
+    color: #666;
+    font-size: 0.85em;
+}
+
+.article-entry pre, .article-entry code {
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+}
+
+.article-entry code {
+    background: #eee none repeat scroll 0 0;
+    padding: 0 0.3em;
+    text-shadow: 0 1px #fff;
+}
+
+.article-entry pre code {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+.article-entry .highlight pre {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+}
+
+.article-entry .highlight table {
+    margin: 0;
+    width: auto;
+}
+
+.article-entry .highlight td {
+    border: medium none;
+    padding: 0;
+}
+
+.article-entry .highlight figcaption {
+    color: #999;
+    font-size: 0.85em;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+.article-entry .highlight figcaption::before, .article-entry .highlight figcaption::after {
+    content: "";
+    display: table;
+}
+
+.article-entry .highlight figcaption::after {
+    clear: both;
+}
+
+.article-entry .highlight figcaption a {
+    float: right;
+}
+
+.article-entry .highlight .gutter pre {
+    padding-right: 20px;
+    text-align: right;
+}
+
+.article-entry .highlight .line {
+    height: 22.4px;
+}
+
+.article-entry .highlight .line.marked {
+    background: #515151 none repeat scroll 0 0;
+}
+
+.article-entry .gist {
+    background: #2d2d2d none repeat scroll 0 0;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px 0;
+    margin: 0 -20px;
+    padding: 15px 20px 15px 0;
+}
+
+.article-entry .gist .gist-file {
+    border: medium none;
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+    margin: 0;
+}
+
+.article-entry .gist .gist-file .gist-data {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+}
+
+.article-entry .gist .gist-file .gist-data .line-numbers {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    padding: 0 20px 0 0;
+}
+
+.article-entry .gist .gist-file .gist-data .line-data {
+    padding: 0 !important;
+}
+
+.article-entry .gist .gist-file .highlight {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+}
+
+.article-entry .gist .gist-file .gist-meta {
+    background: #2d2d2d none repeat scroll 0 0;
+    color: #999;
+    font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 20px;
+    margin-top: 1em;
+    padding: 0;
+    text-shadow: 0 0;
+}
+
+.article-entry .gist .gist-file .gist-meta a {
+    color: #258fb8;
+    font-weight: normal;
+}
+
+.article-entry .gist .gist-file .gist-meta a:hover {
+    text-decoration: underline;
+}
+
+pre .comment, pre .title {
+    color: #999;
+}
+
+pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+    color: #f2777a;
+}
+
+pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+    color: #f99157;
+}
+
+pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+    color: #9c9;
+}
+
+pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+    color: #9c9;
+}
+
+pre .css .hexcolor {
+    color: #6cc;
+}
+
+pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+    color: #69c;
+}
+
+pre .keyword, pre .javascript .function {
+    color: #c9c;
+}

@@ -1,0 +1,16 @@
+<% if (post.prev || post.next){ %>
+    <nav class="gutter">
+        <% if (post.prev){ %>
+            <div class="post-prev">
+                <%= __('prev_post') %>：
+                <a href="<%- url_for(post.prev.path) %>"><%= post.prev.title %></a>
+            </div>
+        <% } %>
+        <% if (post.next){ %>
+            <div class="post-next">
+                <%= __('next_post') %>：
+                <a href="<%- url_for(post.next.path) %>"><%= post.next.title %></a>
+            </div>
+        <% } %>
+    </nav>
+<% } %>

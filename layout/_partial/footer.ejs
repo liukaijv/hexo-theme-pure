@@ -1,0 +1,10 @@
+<footer>
+    <div class="container">
+        <p>
+            &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %> all rights reserved.
+            <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+            <% if (theme.rss){ %>
+                <a href="<%- theme.rss %>" title="<%= __('rss_feed') %>"><i class="lb-icon-rss"></i></a>
+            <% } %>
+    </div>
+</footer>

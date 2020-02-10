@@ -1,0 +1,51 @@
+# Header
+menu:
+  首页: /
+  JAVA: /categories/java/
+  PHP: /categories/php
+  归档: /archives
+rss: /atom.xml
+
+# Content
+excerpt_link: true
+
+# Sidebar
+sidebar: right
+widgets:
+- recent_posts
+- category
+#- tag
+#- link
+- tagcloud
+#- archive
+
+# widget behavior
+archive_type: 'monthy'
+archive_format: 'YYYY/MM'
+show_count: false
+
+# Miscellaneous
+favicon:
+logo_text: Blog
+show_logo: true
+show_author: false
+allow_search: true
+
+# comments
+allow_comment: false
+gitalk:
+  cdnCssUrl: https://unpkg.com/gitalk/dist/gitalk.css
+  cdnJsUrl: https://unpkg.com/gitalk@latest/dist/gitalk.min.js
+  clientID:
+  clientSecret:
+  repo:
+  owner:
+  admin:
+  distractionFreeMode: false
+  language: en
+  perPage: 10
+
+# links
+links:
+  Baidu: http://www.baidu.com/
+

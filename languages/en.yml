@@ -1,0 +1,26 @@
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: Tag cloud
+tweets: Tweets
+prev: Prev
+next: Next
+prev_post: Prev
+next_post: Next
+comment: Comment
+archive_a: Archive
+archive_b: "Archive: %s"
+page: Page %d
+recent_posts: Recent posts
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+published_at: Published at
+excerpt_link: more;
+not_found: Not found!
+link: Links
+keyword: Keyword

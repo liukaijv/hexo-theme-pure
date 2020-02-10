@@ -1,0 +1,45 @@
+<%
+var years = {}
+page.posts.each(function (item, i) {
+    var year = item.date.format('YYYY');
+    var month = item.date.format('MM');
+    if (!(year in years)) {
+        years[year] = {};
+    }
+    if (!(month in years[year])) {
+        years[year][month] = [];
+    }
+    years[year][month].push(item);
+});
+%>
+<% for (var year in years){ %>
+    <section class="archive-item">
+        <h3>
+            <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+        </h3>
+        <% for (var month in years[year]){ %>
+            <div class="archive-month">
+                <a href="<%- url_for(config.archive_dir + '/' + year + '/' + month) %>"><%= moment(year + '-' + month).format(theme.archive_format) %></a>
+            </div>
+            <ul>
+                <% for (var i = 0;i < years[year][month].length;i++){ %>
+                    <li>
+                        <a href="<%- url_for(years[year][month][i].path) %>"><%= years[year][month][i].title %></a>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </section>
+<% } %>
+
+<% if(page.total > 1){ %>
+    <section class="paginate-container">
+        <nav class="pagination">
+            <%- paginator({
+                prev_text: __('prev'),
+                next_text: __('next')
+            }) %>
+        </nav>
+    </section>
+<% } %>
+

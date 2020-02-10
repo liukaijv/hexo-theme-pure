@@ -1,0 +1,21 @@
+<ul class="post-meta">
+    <% var categories = post.categories; %>
+    <% if(categories && categories.length){ %>
+        <li>
+            <%= __('category') %>
+            <% categories.each(function(category, i){ %>
+                <a href="<%- url_for(category.path) %>"><%= category.name %></a>
+                <% if((i + 1) != categories.length){ %>><% } %>
+            <% }) %>
+            ·
+        </li>
+    <% } %>
+    <li>
+        <%= __('published_at') %> <span><%= date(post.date, 'YYYY-MM-DD HH:mm:ss') %></span>
+    </li>
+    <% if(theme.show_author && config.author){ %>
+        <li>
+            · By <span><%= config.author %></span>
+        </li>
+    <% } %>
+</ul>

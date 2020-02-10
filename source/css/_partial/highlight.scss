@@ -1,0 +1,192 @@
+// https://github.com/chriskempson/tomorrow-theme
+$highlight-background: #f0f0f0;
+$highlight-current-line: #393939;
+$highlight-selection: #515151;
+$highlight-foreground: #444;
+$highlight-comment: #888888;
+$highlight-red: #f2777a;
+$highlight-orange: #f99157;
+$highlight-yellow: #ffcc66;
+$highlight-green: #99cc99;
+$highlight-aqua: #66cccc;
+$highlight-blue: #6699cc;
+$highlight-purple: #cc99cc;
+
+%code-block {
+  background: $highlight-background;
+  margin: 15px 0;
+  padding: 0.5em;
+  overflow: auto;
+  color: $highlight-foreground;
+  line-height: $baseFontSize * $baseLineHeight;
+}
+
+%line-numbers {
+  color: #666;
+  font-size: 0.85em;
+}
+
+.article-entry {
+  pre, code {
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  }
+  code {
+    background: $highlight-background;
+    text-shadow: 0 1px #fff;
+    padding: 0 0.3em;
+  }
+  pre {
+    @extend %code-block;
+    code {
+      background: none;
+      text-shadow: none;
+      padding: 0;
+    }
+  }
+  .highlight {
+    @extend %code-block;
+    pre {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      margin: 0;
+      width: auto;
+      tr {
+        border: none;
+      }
+    }
+    td {
+      border: none;
+      padding: 0;
+    }
+    figcaption {
+      @include clearfix();
+      font-size: 0.85em;
+      color: $highlight-comment;
+      line-height: 1em;
+      margin-bottom: 1em;
+      a {
+        float: right;
+      }
+    }
+    .gutter pre {
+      @extend %line-numbers;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .line {
+      height: $baseFontSize * $baseLineHeight;
+    }
+    .line.marked {
+      background: $highlight-selection;
+    }
+  }
+  .gist {
+    margin: 0 $gapSize * -1;
+    border-style: solid;
+    border-color: $borderColorDefault;
+    border-width: 1px 0;
+    background: $highlight-background;
+    padding: 15px $gapSize 15px 0;
+    .gist-file {
+      border: none;
+      font-family: font-mono;
+      margin: 0;
+      .gist-data {
+        background: none;
+        border: none;
+        .line-numbers {
+          @extend %line-numbers;
+          background: none;
+          border: none;
+          padding: 0 20px 0 0;
+        }
+        .line-data {
+          padding: 0 !important;
+        }
+      }
+      .highlight {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      .gist-meta {
+        background: $highlight-background;
+        color: $highlight-comment;
+        font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-shadow: 0 0;
+        padding: 0;
+        margin-top: 1em;
+        margin-left: $gapSize;
+        a {
+          color: $colorLink;
+          font-weight: normal;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+pre {
+  .comment,
+  .title {
+    color: $highlight-comment;
+  }
+  .variable,
+  .attribute,
+  .tag,
+  .regexp,
+  .ruby .constant,
+  .xml .tag .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .css .class,
+  .css .pseudo {
+    color: $highlight-red;
+  }
+  .number,
+  .preprocessor,
+  .built_in,
+  .literal,
+  .params,
+  .constant {
+    color: $highlight-orange;
+  }
+  .class,
+  .ruby .class .title,
+  .css .rules .attribute {
+    color: $highlight-green;
+  }
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdata {
+    color: $highlight-green;
+  }
+  .css .hexcolor {
+    color: $highlight-aqua;
+  }
+  .function,
+  .python .decorator,
+  .python .title,
+  .ruby .function .title,
+  .ruby .title .keyword,
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title {
+    color: $highlight-blue;
+  }
+  .keyword,
+  .javascript .function {
+    color: $highlight-purple;
+  }
+}

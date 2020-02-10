@@ -1,0 +1,20 @@
+<article id="<%= page.layout %>-<%= post.slug %>" class="article-entry post post-type-<%= page.layout %>" itemscope
+         itemprop="blogPost">
+
+    <h2 class="post-title"><%= post.title %></h2>
+
+    <%- partial('post/meta', {post: post}) %>
+
+    <div class="post-content article-entry post-markdown">
+        <%- post.content %>
+    </div>
+
+</article>
+
+<%- partial('post/tag', {post: post}) %>
+
+<%- partial('post/nav', {post: post}) %>
+
+<% if(theme.allow_comment && page.comments){ %>
+    <%- partial('comments/gittalk') %>
+<% } %>

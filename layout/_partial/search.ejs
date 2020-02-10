@@ -1,0 +1,12 @@
+<form class="search-form" id="search-form">
+    <input placeholder="<%= __('keyword') %>" type="search" id="search-input" autocomplete="false" maxlength="10">
+    <button title="<%= __('search') %>" id="search-btn"><i class="lb-icon-search"></i></button>
+    <div class="search-result" id="search-result">
+        <!--<span class="search-result-close">x</span>-->
+        <ul id="search-result-list">
+            <li>无数据</li>
+        </ul>
+    </div>
+</form>
+
+<%- js('js/search') %>
