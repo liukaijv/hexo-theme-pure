@@ -7,7 +7,7 @@
 clone项目下来，放在themes目录
 
 ```bash
-git clone git@github.com:g021/hexo-theme-pure.git 
+git clone git@github.com:liukaijv/hexo-theme-pure.git
 ```
 
 进入目录，把`_config.example.yml`文件改名为`_config.yml`
@@ -96,6 +96,6 @@ links:
 
 ## Demo
 
-[我现在用的](https://g021.github.io/)
+[我现在用的](https://liukaijv.github.io/)
 
 
