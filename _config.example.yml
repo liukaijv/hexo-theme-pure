@@ -1,9 +1,9 @@
 # Header
 menu:
-  首页: /
-  JAVA: /categories/java/
-  PHP: /categories/php
-  归档: /archives
+  Home: /
+  Java: /categories/java/
+  Php: /categories/php
+  Archives: /archives
 rss: /atom.xml
 
 # Content

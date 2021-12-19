@@ -28,10 +28,10 @@ mv _config.example.yml config.yml
 npm install hexo-generator-searchdb --save
 ```
 
-样式用的是sass写的，需要安装`hexo-renderer-scss`
+样式用的是sass写的，需要安装`hexo-render-dart-sass`
 
 ```bash
-npm install hexo-renderer-scss --save
+npm install hexo-render-dart-sass --save
 ```
 
 ## 主题配置
