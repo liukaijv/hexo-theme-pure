@@ -11,8 +11,14 @@ page.posts.each(function (item, i) {
     }
     years[year][month].push(item);
 });
+// 倒排序
+yearArr = yearArr.sort(function (a, b) {
+    return (+b) - (+a)
+});
 %>
-<% for (var year in years){ %>
+<% for (var j = 0;j < yearArr.length;j++){
+    var year = yearArr[j];
+%>
     <section class="archive-item">
         <h3>
             <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
