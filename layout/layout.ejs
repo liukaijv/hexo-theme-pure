@@ -23,5 +23,8 @@
 
 <%- partial('_partial/footer.ejs') %>
 <%- js('js/script') %>
+<% if(theme.allow_code_copy){ %>
+    <%- partial('_partial/code-copy') %>
+<% } %>
 </body>
 </html>

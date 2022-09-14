@@ -1,8 +1,8 @@
 # Header
 menu:
   Home: /
-  Java: /categories/java/
-  Php: /categories/php
+  JAVA: /categories/java/
+  PHP: /categories/php
   Archives: /archives
 rss: /atom.xml
 
@@ -12,11 +12,11 @@ excerpt_link: true
 # Sidebar
 sidebar: right
 widgets:
-- recent_posts
-- category
-#- tag
-#- link
-- tagcloud
+  - recent_posts
+  - category
+  #- tag
+  #- link
+  - tagcloud
 #- archive
 
 # widget behavior
@@ -26,15 +26,15 @@ show_count: false
 
 # Miscellaneous
 favicon:
-logo_text: Blog
-show_logo: true
+logo_text: ""
+logo_img: "images/logo.svg"
 show_author: false
 allow_search: true
 
-# comments
+# Comments
 allow_comment: false
 gitalk:
-  cdnCssUrl: https://unpkg.com/gitalk/dist/gitalk.css
+  cdnCssUrl: https://unpkg.com/gitalk@latest/dist/gitalk.css
   cdnJsUrl: https://unpkg.com/gitalk@latest/dist/gitalk.min.js
   clientID:
   clientSecret:
@@ -45,7 +45,10 @@ gitalk:
   language: en
   perPage: 10
 
-# links
+# Links
 links:
-  Baidu: http://www.baidu.com/
+  Baidu: https://www.baidu.com/
+
+# Code block copy btn
+allow_code_copy: true
 

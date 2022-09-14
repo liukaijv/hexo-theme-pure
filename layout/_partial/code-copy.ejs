@@ -1,0 +1,69 @@
+<style>
+    .highlight {
+        position: relative;
+    }
+
+    .highlight .copy-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        cursor: pointer;
+        background: rgba(0, 0, 0, .4);
+        padding: 0 6px;
+        color: #fff;
+        font-size: 12px;
+        display: none;
+    }
+
+    .highlight .copy-btn.show {
+        display: block;
+    }
+</style>
+<script>
+    // code copy
+    var $codeBlocks = document.getElementsByClassName("highlight");
+
+    for (var i = 0; i < $codeBlocks.length; i++) {
+        var $block = $codeBlocks[i];
+
+        var $copyBtn = document.createElement("button");
+        $copyBtn.innerText = "<%= __('copy_btn_text') %>"
+        $copyBtn.classList.add("copy-btn");
+        $block.prepend($copyBtn);
+
+        $copyBtn.addEventListener('click', function (evt) {
+            var blockCode = "";
+            var $copyBtn = this;
+            $copyBtn.parentNode.querySelectorAll(".code .line").forEach(function ($line) {
+                blockCode += $line.textContent + "\n";
+            })
+            var ta = document.createElement('textarea')
+            document.body.appendChild(ta)
+            ta.style.position = 'absolute'
+            ta.style.top = '0px'
+            ta.style.left = '0px'
+            ta.value = blockCode
+            ta.select()
+            ta.focus()
+            var flag = document.execCommand('copy')
+            if (flag) {
+                $copyBtn.innerText = "<%= __('copy_success') %>"
+            } else {
+                $copyBtn.innerText = "<%= __('copy_fail') %>"
+            }
+            document.body.removeChild(ta)
+        })
+
+        $block.addEventListener("mouseenter", function (evt) {
+            var $copyBtn = this.querySelector('.copy-btn');
+            $copyBtn.innerText = "<%= __('copy_btn_text') %>"
+            $copyBtn.classList.add("show");
+        })
+
+        $block.addEventListener("mouseleave", function (evt) {
+            var $copyBtn = this.querySelector('.copy-btn');
+            $copyBtn.classList.remove("show");
+        })
+    }
+</script>

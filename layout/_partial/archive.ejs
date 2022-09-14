@@ -1,5 +1,6 @@
 <%
 var years = {}
+var yearArr = [];
 page.posts.each(function (item, i) {
     var year = item.date.format('YYYY');
     var month = item.date.format('MM');
@@ -10,6 +11,9 @@ page.posts.each(function (item, i) {
         years[year][month] = [];
     }
     years[year][month].push(item);
+    if (yearArr.indexOf(year) == -1) {
+        yearArr.push(year);
+    }
 });
 // 倒排序
 yearArr = yearArr.sort(function (a, b) {
@@ -19,23 +23,23 @@ yearArr = yearArr.sort(function (a, b) {
 <% for (var j = 0;j < yearArr.length;j++){
     var year = yearArr[j];
 %>
-    <section class="archive-item">
-        <h3>
-            <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
-        </h3>
-        <% for (var month in years[year]){ %>
-            <div class="archive-month">
-                <a href="<%- url_for(config.archive_dir + '/' + year + '/' + month) %>"><%= moment(year + '-' + month).format(theme.archive_format) %></a>
-            </div>
-            <ul>
-                <% for (var i = 0;i < years[year][month].length;i++){ %>
-                    <li>
-                        <a href="<%- url_for(years[year][month][i].path) %>"><%= years[year][month][i].title %></a>
-                    </li>
-                <% } %>
-            </ul>
-        <% } %>
-    </section>
+<section class="archive-item">
+    <h3>
+        <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+    </h3>
+    <% for (var month in years[year]){ %>
+        <div class="archive-month">
+            <a href="<%- url_for(config.archive_dir + '/' + year + '/' + month) %>"><%= moment(year + '-' + month).format(theme.archive_format) %></a>
+        </div>
+        <ul>
+            <% for (var i = 0;i < years[year][month].length;i++){ %>
+                <li>
+                    <a href="<%- url_for(years[year][month][i].path) %>"><%= years[year][month][i].title %></a>
+                </li>
+            <% } %>
+        </ul>
+    <% } %>
+</section>
 <% } %>
 
 <% if(page.total > 1){ %>

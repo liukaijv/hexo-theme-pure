@@ -1,8 +1,9 @@
 (function () {
 
     // toggle nav
+    var $header = document.getElementById('header');
     document.getElementById('toggle-nav').addEventListener('click', function () {
-        document.getElementById('nav').classList.toggle('opened');
+        $header.classList.toggle('menu-opened');
     });
 
 })();

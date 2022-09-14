@@ -41,10 +41,10 @@ npm install hexo-render-dart-sass --save
 ```yml
 # Header
 menu:
-  首页: /
+  Home: /
   JAVA: /categories/java/
   PHP: /categories/php
-  归档: /archives
+  Archives: /archives
 rss: /atom.xml
 
 # Content
@@ -53,11 +53,11 @@ excerpt_link: true
 # Sidebar
 sidebar: right
 widgets:
-- recent_posts
-- category
-#- tag
-#- link
-- tagcloud
+  - recent_posts
+  - category
+  #- tag
+  #- link
+  - tagcloud
 #- archive
 
 # widget behavior
@@ -67,15 +67,15 @@ show_count: false
 
 # Miscellaneous
 favicon:
-logo_text: Blog
-show_logo: true
+logo_text: ""
+logo_img: "images/logo.svg"
 show_author: false
 allow_search: true
 
-# comments
+# Comments
 allow_comment: false
 gitalk:
-  cdnCssUrl: https://unpkg.com/gitalk/dist/gitalk.css
+  cdnCssUrl: https://unpkg.com/gitalk@latest/dist/gitalk.css
   cdnJsUrl: https://unpkg.com/gitalk@latest/dist/gitalk.min.js
   clientID:
   clientSecret:
@@ -86,16 +86,18 @@ gitalk:
   language: en
   perPage: 10
 
-# links
+# Links
 links:
-  Baidu: http://www.baidu.com/
+  Baidu: https://www.baidu.com/
 
+# Code block copy btn
+allow_code_copy: true
 ```
 
 评论用的是gittalk，参数和官网差不多,[https://github.com/gitalk/gitalk](https://github.com/gitalk/gitalk)，唯一差别是`admin: githubUser`不是这样`admin: ['githubUser']`
 
 ## Demo
 
-[我现在用的](https://liukaijv.github.io/)
+[我现在用的](https://liukaijv.github.io)
 
 

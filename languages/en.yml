@@ -24,3 +24,6 @@ excerpt_link: more;
 not_found: Not found!
 link: Links
 keyword: Keyword
+copy_btn_text: Copy
+copy_success: Copy success
+copy_fail: Copy fail

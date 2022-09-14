@@ -47,15 +47,24 @@ header {
   border-bottom: 1px solid $borderColorDefault;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-  .logo {
+  .logo{
+    line-height: 40px;
+    margin-right: 30px;
+  }
+
+  .logo_text {
     font-size: 24px;
     font-family: "Chancery", cursive, LiSu, sans-serif;
     text-shadow: 1px 1px 3px;
     margin-right: 40px;
   }
+  .logo_img{
+    witdh: 32px;
+    height: 32px;
+  }
 
   .menu {
-    @include flex(2);
+    @include flex();
     @extend .clearfix;
     ul {
       li {
@@ -81,19 +90,23 @@ header {
   .search-form {
     @include flexbox();
     position: relative;
-    border: 1px solid $borderColorDefault;
-    input,
-    button {
-      border: none;
-      padding: 4px 6px;
-    }
-    button {
-      cursor: pointer;
-    }
-    input {
-      @include flex();
-    }
     z-index: 10;
+    .search-control {
+      width: 100%;
+      @include flexbox();
+      border: 1px solid $borderColorDefault;
+      input,
+      button {
+        border: none;
+        padding: 4px 6px;
+      }
+      button {
+        cursor: pointer;
+      }
+      input {
+        @include flex();
+      }
+    }
   }
 
   .search-result {
@@ -160,7 +173,8 @@ header {
   header {
     padding: 10px 0;
     .logo {
-      @include flex(1);
+      margin-right: 0;
+      white-space: nowrap;
     }
     .menu {
       position: absolute;
@@ -168,20 +182,27 @@ header {
       max-height: 0;
       overflow: hidden;
       @include transition(all .8s);
-      &.opened {
-        position: relative;
-        max-height: 9999px;
-      }
       ul li {
         float: none;
         margin: 0;
+        text-align: center;
       }
     }
     .search-form {
-      display: none;
+      @include flex(1);
+      margin-left: 20px;
     }
     .toggle-menu {
       display: block;
+    }
+    &.menu-opened {
+      .menu {
+        position: relative;
+        max-height: 9999px;
+      }
+      .search-form {
+        display: none;
+      }
     }
   }
 

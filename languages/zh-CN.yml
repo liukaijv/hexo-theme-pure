@@ -24,3 +24,6 @@ excerpt_link: 查看详情&raquo;
 not_found: 您访问的页面没有找到！
 link: 站点收藏
 keyword: 关键字
+copy_btn_text: 复制
+copy_success: 复制成功
+copy_fail: 复制失败

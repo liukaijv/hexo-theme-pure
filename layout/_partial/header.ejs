@@ -1,16 +1,16 @@
-<header>
+<header id="header">
     <div class="container">
         <% if(theme.show_logo){ %>
-            <div class="logo">
-                <% if(theme.show_logo && theme.logo_img){ %>
-                    <a href="<%- url_for() %>"><img src="<%- url_for(theme.logo_img) %>" class="logo_img"/></a>
-                <% } %>
-                <% if(theme.show_logo && theme.logo_text){ %>
-                    <h1 class="logo_text">
-                        <a href="<%- url_for() %>"><%= theme.logo_text %></a>
-                    </h1>
-                <% } %>
-            </div>
+        <div class="logo">
+            <% if(theme.show_logo && theme.logo_img){ %>
+                <a href="<%- url_for() %>"><img src="<%- url_for(theme.logo_img) %>" class="logo_img"/></a>
+            <% } %>
+            <% if(theme.show_logo && theme.logo_text){ %>
+            <h1 class="logo_text">
+                <a href="<%- url_for() %>"><%= theme.logo_text %></a>
+            </h1>
+             <% } %>
+        </div>
         <% } %>
         <nav class="menu" id="nav">
             <ul>
