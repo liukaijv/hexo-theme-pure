@@ -47,6 +47,7 @@
             ta.select()
             ta.focus()
             var flag = document.execCommand('copy')
+            ta.blur()
             if (flag) {
                 $copyBtn.innerText = "<%= __('copy_success') %>"
             } else {
